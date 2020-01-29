@@ -28,7 +28,7 @@ soccer.run=async (req,resp)=>{
         jsonResp.forEach(r=>{
             h += `<tr><td class="code"><nobr>${r.code}</nobr></td><td class="label">${r.label}</td></tr>`
         })
-        h += `</table>`
+        h += `</table><hr>`
         div.innerHTML=h
         // clean input
         let ip=document.getElementById('inputSoccer')
