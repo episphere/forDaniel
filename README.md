@@ -1,2 +1,2 @@
 # forDaniel
-celebrating episphere's first AI API :-)
+Celebrating episphere's first AI API :-), live at https://episphere.github.io/forDaniel/
