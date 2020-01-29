@@ -4,7 +4,7 @@ soccer={}
 soccer.ui=_=>{
     const div=document.getElementById('soccerDiv')
     if(div){
-        let h='type/paste job description below then press Enter or <button id="soccerBt" onclick="soccer.run(inputSoccer.value,respSoccer)" type="button" class="btn btn-primary">Submit</button>'
+        let h='<p>type/paste job description below then press Enter or <button id="soccerBt" onclick="soccer.run(inputSoccer.value,respSoccer)" type="button" class="btn btn-primary">Submit</button></p>'
         h += '<input id="inputSoccer" style="width:100%">'
         h += '<div id="respSoccer"></div>'
         div.innerHTML=h
