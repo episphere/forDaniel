@@ -1,0 +1,18 @@
+<head>
+    <script src="forDaniel.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap.native@2.0.27/dist/bootstrap-native-v4.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!--<link href="https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/picker.css" rel="stylesheet"> -->
+    <link href="forDaniel.css" rel="stylesheet">
+    <!-- https://developer.box.com/docs/box-content-picker -->
+    <!-- <script src="https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/picker.js"></script>-->
+</head>
+<body onload="setTimeout(_=>soccer.ui('soccerDiv'),300)" class="container"> <!-- the timeout is completely not needed, it is used here to match the expectation that a tool is being loaded -->
+    <div>
+        <h2>Daniel's Soccer AI <i class="fa fa-power-off" style="color:green;font-size:x-large;cursor:pointer" onclick="this.style.color='red';location.reload()"></i></h2>
+        <p>Client application testing Daniel's new AI engine for Soccer. The <a href="https://github.com/episphere/roc/blob/master/forDaniel.js" target="_blank">support library</a> can be required client or server side, with or without graphics.</p>
+        <div id="soccerDiv"><span style="color:red">Loading ... <br>if this takes too long please <a href="https://github.com/episphere/forDaniel/issues" target="_blank">create an issue</a>.</span></div>
+    </div>
+</body>
+</html>    
