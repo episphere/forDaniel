@@ -7,5 +7,19 @@ h2 {
 }
 
 h3 {
-    color:gray
+    color:green
+}
+
+a:hover {
+    background-color:yellow;
+    color:red
+}
+
+.code {
+    color:maroon;
+    font-weight:bolder;
+    vertical-align:top
+}
+.label {
+    color:blue
 }

@@ -22,11 +22,11 @@ soccer.run=async (req,resp)=>{
     if(typeof(resp)=='object'){
         let div=document.createElement('div')
         respSoccer.insertBefore(div,respSoccer.firstChild)
-        let h=`<h3>${req} :</h3>`
+        let h=`<h3>${req}</h3>`
         h += `<table>`
         h += `<tr><th>Code</th><th>Label</th></tr>`
         jsonResp.forEach(r=>{
-            h += `<tr><td><nobr>${r.code}</nobr></td><td>${r.label}</td></tr>`
+            h += `<tr><td class="code"><nobr>${r.code}</nobr></td><td class="label">${r.label}</td></tr>`
         })
         h += `</table>`
         div.innerHTML=h
