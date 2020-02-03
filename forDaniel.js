@@ -5,7 +5,7 @@ soccer.ui=_=>{
     const div=document.getElementById('soccerDiv')
     if(div){
         let h='<p>type/paste job title below, such as "<span style="color:blue;cursor:pointer" onclick="inputSoccer.value=\'farmer\'">farmer</span>" or "<span style="color:blue;cursor:pointer" onclick="inputSoccer.value=\'data scientist\'">data scientist</span>", then press Enter or <button id="soccerBt" onclick="soccer.run(inputSoccer.value,respSoccer)" type="button" class="btn btn-primary">Submit</button></p>'
-        h += 'Title: <input id="inputSoccer" style="color:blue;width:60%">'
+        h += 'Title: <input id="inputSoccer" style="color:blue;width:60%"> <span style="color:red" id="callMsg"></span>'
         h += '<div id="respSoccer"></div>'
         div.innerHTML=h
         inputSoccer.onkeyup=ev=>{
@@ -16,6 +16,9 @@ soccer.ui=_=>{
     }
 }
 soccer.run=async (req,resp)=>{
+    if(document.getElementById('callMsg')){
+        document.getElementById('callMsg').textContent="calling AI ..."
+    }
     const url='https://sitf-cwlcji5kxq-uc.a.run.app/soccer/code'
     let jsonResp =await (await fetch(`${url}?title=${req}`)).json()
     if(typeof(resp)=='object'){
@@ -31,7 +34,10 @@ soccer.run=async (req,resp)=>{
         div.innerHTML=h
         // clean input
         let ip=document.getElementById('inputSoccer')
-        if(ip){ip.value=''}        
+        if(ip){ip.value=''}
+        if(document.getElementById('callMsg')){
+            document.getElementById('callMsg').textContent=""
+        }       
     }else{
         jsonResp.forEach((r,i)=>{ // augmenting data structure
             r.title=req
