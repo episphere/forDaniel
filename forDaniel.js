@@ -19,7 +19,8 @@ soccer.run=async (req,resp)=>{
     if(document.getElementById('callMsg')){
         document.getElementById('callMsg').textContent="calling AI ..."
     }
-    const url='https://sitf-cwlcji5kxq-uc.a.run.app/soccer/code'
+    //const url='https://sitf-cwlcji5kxq-uc.a.run.app/soccer/code'
+    const url = 'https://sitf-raft3imjaq-uc.a.run.app/soccer/code'
     let jsonResp =await (await fetch(`${url}?title=${req}`)).json()
     if(typeof(resp)=='object'){
         let div=document.createElement('div')
